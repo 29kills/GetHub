@@ -86,8 +86,8 @@ class Tree{
 					uncle->_col = BLACK;
 					grandfather->_col = RED;
 					//向上层处理
-					cur = parent;
-					parent = parent->_parent;
+					cur = grandfather;
+					parent = cur->_parent;
 				}
 				else{ //叔叔不存在或为黑色
 					//Node* tmp = parent;//保存原parent的位置，防止调整后parent位置发生变化，调整颜色导致错误
@@ -214,7 +214,7 @@ class Tree{
 
 
 void RBSTree_test(){
-	int a[] = { 16,3,7,11,9,26,18,14,15,1,2};
+	int a[] = { 16,3,7,11,9,26,18,14,15,1,2,3,4,5,7,89,45,32};
 	//int a[] = {3,1,2,4,5,6,7,8};
 	//int a[] = {1,2,3};
 	//int a[] = { 16,3,7};
